@@ -9,9 +9,11 @@ body {
 }
 
 .index-main {
-    background-image: url("https://wallpapers.com/images/featured-full/cat-g9rdx9uk2425fip2.jpg");
-    background-size: cover;
-    background-position: 50% 0;
+    /*background-image: url("https://wallpapers.com/images/featured-full/cat-g9rdx9uk2425fip2.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: 50% 0;*/
+    background-color: #B6D4ED;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -22,9 +24,10 @@ body {
 .navbar {
     width: 100%;
     height: 56px;
-    background-color: #2b2b2b;
+    background-color: #071013;
     text-align: center;
     margin: auto;
+
 }
 
 .navbar-content {
@@ -32,6 +35,18 @@ body {
     width: 100%;
     height: 100%;
     text-align: left;
+}
+
+.navbar-content a {
+    text-decoration: none;
+    color: #E2EFF8;
+    font-size: 24px;
+}
+
+.navbar-content a:hover {
+    text-decoration: none;
+    color: #fffefe;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -46,6 +61,8 @@ body {
     top: 50%;
     margin: 0;
     text-align: right;
+    width: auto;
+    float: right;
     height: auto;
 }
 
@@ -54,22 +71,6 @@ body {
     margin-left: 0;
     margin-right: 24px;
     text-align: left;
-}
-
-.nav-list li:first-child {
-    float: left;
-}
-
-.navbar-content a {
-    text-decoration: none;
-    color: #e0e0e0;
-    font-size: 24px;
-}
-
-.navbar-content a:hover {
-    text-decoration: none;
-    color: #fffefe;
-
 }
 
 .navbar-collapse {
@@ -82,34 +83,25 @@ body {
         transform: translateY(-50%);
         top: 50%;
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 30px;
         margin-left: 5%;
-        background: transparent url("/img/menu.png");
-        background-size: cover;
+        background: transparent url("/img/menu.png") no-repeat;
+        cursor: pointer;
+        background-size: contain;
     }
 }
 
-.navbar-collapse button {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    outline: none;
-    border: none;
-}
-
-.navbar-collapse button:hover {
-    cursor: pointer;
-}
-
 .navbar-collapse-content {
-    background-color: #363636;
+    background-color: #071013;
     display: none;
-    box-shadow: 0 8px 16px 0 rgba(28, 28, 28, 1);
+    box-shadow: 0 4px 16px 0 rgba(28, 28, 28, 1);
     position: absolute;
     width: 150px;
     height: 200px;
     text-align: left;
+    margin-top: 30px;
+    cursor: auto;
 }
 
 .navbar-collapse-content ul {
@@ -135,9 +127,44 @@ body {
     display: block;
 }
 
+.navbar-collapse-content--opened {
+    display: block;
+}
+
+.navbar-logo {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    background-image: url("/img/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+    margin: 0 10px 0 10px;
+}
+@media only screen and (max-width: 600px) {
+    .navbar-logo {
+        float: right;
+    }
+}
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.content {
+    width: 75%;
+    box-shadow: 0 8px 16px 0 rgba(28, 28, 28, 1);
+    background-color: #E8EEF2;
+    margin: auto;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        width: 100%;
+    }
 }
 
