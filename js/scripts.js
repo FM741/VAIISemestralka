@@ -15,11 +15,11 @@ function scrollNavbar() {
 
 const dropdownBtn = document.querySelector(".navbar-collapse");
 const content = document.querySelector(".navbar-collapse-content");
-// noinspection JSUnusedLocalSymbols
-dropdownBtn.addEventListener("blur", evt => {
+
+dropdownBtn.addEventListener("blur", _evt => {
     content.classList.remove("navbar-collapse-content--opened");
 })
-// noinspection JSUnusedLocalSymbols
-dropdownBtn.addEventListener('click', (event) => {
+
+dropdownBtn.addEventListener('click', (_event) => {
     content.classList.toggle('navbar-collapse-content--opened');
 });

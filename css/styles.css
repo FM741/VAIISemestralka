@@ -6,19 +6,26 @@
 
 body {
     font-family: 'open_sansregular', Times, serif;
+    color: #F2F4F3;
+}
+
+a {
+    text-decoration: none;
+    color: #F2F4F3;
 }
 
 .index-main {
-    /*background-image: url("https://wallpapers.com/images/featured-full/cat-g9rdx9uk2425fip2.jpg");*/
-    /*background-size: cover;*/
-    /*background-position: 50% 0;*/
-    background-color: #B6D4ED;
-    overflow: hidden;
-    position: absolute;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    /*background-color: #846267;*/
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
 }
 
 .navbar {
@@ -38,14 +45,12 @@ body {
 }
 
 .navbar-content a {
-    text-decoration: none;
-    color: #E2EFF8;
     font-size: 24px;
 }
 
 .navbar-content a:hover {
-    text-decoration: none;
-    color: #fffefe;
+    color: #e7e7e7;
+    text-decoration: underline;
 
 }
 
@@ -59,18 +64,22 @@ body {
     position: relative;
     transform: translateY(-50%);
     top: 50%;
-    margin: 0;
+    margin: 0 0 0 68px;
     text-align: right;
-    width: auto;
-    float: right;
-    height: auto;
+    float: left;
+    width: calc(100% - 68px);
+    padding: 0;
 }
 
 .nav-list li {
     display: inline;
-    margin-left: 0;
     margin-right: 24px;
     text-align: left;
+    float: right;
+}
+
+.nav-list li:first-child {
+    float: left;
 }
 
 .navbar-collapse {
@@ -86,7 +95,7 @@ body {
         width: 45px;
         height: 30px;
         margin-left: 5%;
-        background: transparent url("/img/menu.png") no-repeat;
+        background: transparent url("../img/menu.png") no-repeat;
         cursor: pointer;
         background-size: contain;
     }
@@ -98,7 +107,7 @@ body {
     box-shadow: 0 4px 16px 0 rgba(28, 28, 28, 1);
     position: absolute;
     width: 150px;
-    height: 200px;
+    height: auto;
     text-align: left;
     margin-top: 30px;
     cursor: auto;
@@ -135,13 +144,14 @@ body {
     position: relative;
     transform: translateY(-50%);
     top: 50%;
-    background-image: url("/img/logo.png");
+    background-image: url("../img/logo.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 48px;
     width: 48px;
     margin: 0 10px 0 10px;
 }
+
 @media only screen and (max-width: 600px) {
     .navbar-logo {
         float: right;
@@ -154,12 +164,36 @@ body {
     width: 100%;
 }
 
+.wrapper-content {
+    margin-top: 40px;
+    min-height: calc(100vh - 156px);
+}
+
+
 .content {
-    width: 75%;
-    box-shadow: 0 8px 16px 0 rgba(28, 28, 28, 1);
-    background-color: #E8EEF2;
+    /*box-shadow: 0 8px 16px 0 rgba(28, 28, 28, 1);*/
+    background-color: #071013;
+    width: 90%;
+    display: flex;
     margin: auto;
-    height: 100%;
+    font-weight: bolder;
+    border-top: #ffffff solid 2px;
+
+}
+
+.content-header {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.content a {
+    display: contents;
+}
+
+.content a .content-forum:hover {
+    background-color: #1f1f1f;
+    margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -167,4 +201,34 @@ body {
         width: 100%;
     }
 }
+
+.content-forum {
+    flex: 1 1 150px;
+    padding: 15px;
+}
+
+.content-posts {
+    flex: 0 1 120px;
+    padding: 15px;
+}
+
+.content-last-post {
+    flex: 0 1 200px;
+    padding: 15px;
+    word-break: break-all;
+}
+
+footer {
+    margin-top: 0; /* take available whitespace */
+    margin-bottom: -10px;      /* remove bottom whitespace */
+    height: 60px;
+}
+
+.cfooter {
+    width: 100%;
+    height: 100%;
+    background-color: #071013;
+}
+
+
 
