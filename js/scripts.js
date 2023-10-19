@@ -16,10 +16,12 @@ function scrollNavbar() {
 const dropdownBtn = document.querySelector(".navbar-collapse");
 const content = document.querySelector(".navbar-collapse-content");
 
-dropdownBtn.addEventListener("blur", _evt => {
-    content.classList.remove("navbar-collapse-content--opened");
-})
+document.addEventListener('click', (evt) => {
+    if (!content.contains(evt.target) && !dropdownBtn.contains(evt.target)) {
+        content.classList.remove('navbar-collapse-content--opened');
+    }
+});
 
-dropdownBtn.addEventListener('click', (_event) => {
+dropdownBtn.addEventListener('click', (_evt) => {
     content.classList.toggle('navbar-collapse-content--opened');
 });
