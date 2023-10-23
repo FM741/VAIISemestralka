@@ -27,6 +27,17 @@ button {
     font-family: 'open_sansregular', Times, serif;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
+.vl {
+    flex: 0 0 1px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
 .align-center {
     text-align: center;
 }
@@ -130,14 +141,12 @@ button {
     height: 100%;
     margin: 0;
     padding: 6px;
-    z-index: -1;
 }
 
 .navbar-collapse-content li {
     list-style-type: none;
     margin: 0 0;
     padding: 12px;
-    z-index: -1;
 }
 
 .navbar-collapse-content a {
@@ -180,9 +189,10 @@ button {
 
 .wrapper-content {
     margin-top: 40px;
-    min-height: calc(100vh - 156px);
+    min-height: calc(100vh - 196px);
+    position: relative;
+    z-index: -1;
 }
-
 
 .content {
     /*box-shadow: 0 8px 16px 0 rgba(28, 28, 28, 1);*/
@@ -232,8 +242,7 @@ button {
 }
 
 footer {
-    margin-top: 0; /* take available whitespace */
-    margin-bottom: -10px; /* remove bottom whitespace */
+    margin-top: 40px;
     height: 60px;
     width: 100%;
     background-color: #071013;
@@ -247,7 +256,7 @@ footer {
     margin: auto;
     font-size: 28px;
     border-radius: 6px;
-    overflow:auto;
+    overflow: auto;
     border: #574f4f 1px solid;
 }
 
@@ -312,6 +321,62 @@ footer {
 .forgot-password {
     font-size: 16px;
     font-weight: 550;
+}
+
+.topic-content {
+    width: 95%;
+    background-color: #071013;
+    margin: auto;
+    overflow: auto;
+    border-radius: 4px;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .topic-content {
+        width: 100%;
+    }
+}
+
+.topic-content-name {
+    margin: 15px 30px 15px;
+}
+
+.topic-content-header {
+    display: flex;
+    font-size: 18px;
+}
+
+.topic-content-author {
+    flex: 0 0 200px;
+    margin: 10px 0 10px 0;
+}
+
+.topic-content-message {
+    flex: 1 1 auto;
+    margin: 10px;
+
+}
+
+.topic-content-body {
+    display: flex;
+    word-break: break-all;
+    padding: 15px 0 15px 0;
+}
+
+.user-image {
+    height: 128px;
+    width: 128px;
+}
+
+.username {
+    max-width: 128px;
+    margin: 0 auto;
+}
+
+.space {
+    margin: 10px;
 }
 
 
