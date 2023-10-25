@@ -21,6 +21,7 @@ a:hover {
 
 input {
     font-family: 'open_sansregular', Times, serif;
+
 }
 
 button {
@@ -40,6 +41,18 @@ hr {
 
 .align-center {
     text-align: center;
+}
+
+.fs-small {
+    font-size: small;
+}
+
+.fs-medium {
+    font-size: medium;
+}
+
+.fs-big{
+    font-size: large;
 }
 
 .index-main {
@@ -260,8 +273,16 @@ footer {
     border: #574f4f 1px solid;
 }
 
-.login h2 {
-    margin: 15px 0 10px 0;
+.register {
+    width: 350px;
+    height: 500px;
+    background-color: #071013;
+    position: relative;
+    margin: auto;
+    font-size: 28px;
+    border-radius: 6px;
+    overflow: auto;
+    border: #574f4f 1px solid;
 }
 
 @media only screen and (max-width: 400px) {
@@ -272,19 +293,23 @@ footer {
     }
 }
 
-.login-col {
+.form h2 {
+    margin: 15px 0 10px 0;
+}
+
+.form-col {
     width: max-content;
     height: max-content;
     margin: auto;
     overflow: auto;
 }
 
-.login-row {
+.form-row {
     margin-top: 10px;
     text-align: center;
 }
 
-.login-row input {
+.form-row input {
     background-color: #071013;
     color: #F2F4F3;
     border: none;
@@ -293,12 +318,12 @@ footer {
     font-size: 18px;
 }
 
-.login-row input:focus {
+.form-row input:focus {
     border-bottom: 2px white solid;
 }
 
-.login-row button {
-    margin-top: 20px;
+.form-row button {
+    margin-top: 10px;
     background-color: #F2F4F3;
     width: 100px;
     height: 40px;
@@ -310,11 +335,11 @@ footer {
     font-weight: 700;
 }
 
-.login-row button:hover {
+.form-row button:hover {
     background-color: #d2d3d2;
 }
 
-.login-row button:active {
+.form-row button:active {
     background-color: #44b644;
 }
 

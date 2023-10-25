@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <title>Cats;Gate - Login</title>
+    <title>Cats;Gate - Register</title>
 </head>
 <body>
 <div class="index-main">
@@ -16,23 +16,23 @@
                 <div class="navbar-collapse-content">
                     <ul>
                         <li><a href="index.html"> Home </a></li>
-                        <li><a href="register.html"> Register </a></li>
+                        <li><a href="login.html"> Login </a></li>
                     </ul>
                 </div>
             </div>
             <ul class="nav-list">
                 <li><a href="index.html"> Cats;Gate </a></li>
-                <li><a href="register.html"> Register </a></li>
+                <li><a href="login.html"> Login </a></li>
             </ul>
             <div class="navbar-logo"></div>
         </div>
     </div>
     <div class="wrapper-content">
-        <div class="login form">
+        <div class="register form">
             <div class="form-row">
-                <h2>Login</h2>
+                <h2>Register</h2>
             </div>
-            <form action="login-form.php">
+            <form action="reg-form.php">
                 <div class="form-col">
                     <div class="form-row">
                         <label for="username">Username</label> <br>
@@ -43,10 +43,30 @@
                         <input type="password" name="password" id="password" placeholder="Enter password">
                     </div>
                     <div class="form-row">
-                        <button>Login</button>
+                        <label for="passcheck">Repeat Password</label> <br>
+                        <input type="password" id="passcheck" placeholder="Enter password again">
                     </div>
                     <div class="form-row">
-                        <a href="passreset.html" class="forgot-password"> Forgot password? </a>
+                        <div class="fs-big"><b> Please select your gender: </b></div>
+                    </div>
+                    <div class="form-row">
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male" class="fs-medium">
+                            Male
+                        </label>
+
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female" class="fs-medium">
+                            Female
+                        </label>
+
+                        <input type="radio" name="gender" value="other" id="other">
+                        <label for="other" class="fs-medium">
+                            Other
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <button>Register</button>
                     </div>
                 </div>
             </form>
